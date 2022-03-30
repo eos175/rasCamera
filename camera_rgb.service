@@ -1,0 +1,11 @@
+[Unit]
+Description=take photos every interval
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=python3 /home/pi/camera_rgb/main.py 60 /tmp
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
